@@ -1,40 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Public Gallery — Community Fonts</title>
-  <meta name="description" content="Community fonts you can download." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js" defer></script>
-</head>
-<body>
-  <div class="page">
-    <header class="header">
-      <button class="back-btn" aria-label="Back to app">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 18l-6-6 6-6" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Universal Font Maker — Community Fonts</title>
+    <meta name="description" content="Community fonts created with UFMaker. Preview, inspect metadata and download Burmese, Latin and Thai fonts." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="back" href="https://play.google.com/store/apps/details?id=com.cstmpj.two" aria-label="Open Universal Font Maker on Google Play">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M15 4 L7 12 L15 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </button>
-      <div class="header-text">
-        <h1>Public Gallery</h1>
-        <p>Community fonts you can download</p>
+      </a>
+      <div class="titles">
+        <h1>Universal Font Maker</h1>
+        <p>Community font created with UFMaker.</p>
       </div>
     </header>
 
-    <nav class="filters" aria-label="Font filters">
-      <button class="filter-chip active" data-filter="all">All</button>
-      <button class="filter-chip" data-filter="burmese">Burmese</button>
-      <button class="filter-chip" data-filter="latin">Latin</button>
-      <button class="filter-chip" data-filter="thai">Thai</button>
+
+    <nav class="chips" id="chips" aria-label="Filter by language">
+      <button class="chip is-active" data-lang="all" type="button">All</button>
+      <button class="chip" data-lang="Burmese" type="button">Burmese</button>
+      <button class="chip" data-lang="Latin" type="button">Latin</button>
+      <button class="chip" data-lang="Thai" type="button">Thai</button>
     </nav>
 
-    <main class="gallery" id="gallery"></main>
-  </div>
+    <main id="list" class="list"></main>
 
-  <script src="script.js" defer></script>
-</body>
+    <!-- Action sheet -->
+    <div class="overlay" id="overlay" hidden>
+      <div class="sheet" id="sheet-actions" hidden>
+        <div class="sheet-group">
+          <div class="sheet-head">
+            <div class="sheet-title" id="as-title"></div>
+            <div class="sheet-sub" id="as-sub"></div>
+          </div>
+          <button class="sheet-btn" data-act="preview" type="button">Preview</button>
+          <button class="sheet-btn" data-act="download" type="button">Download</button>
+          <button class="sheet-btn" data-act="metadata" type="button">Metadata</button>
+          <button class="sheet-btn" data-act="copy" type="button">Copy link</button>
+        </div>
+        <button class="sheet-cancel" data-act="close" type="button">Cancel</button>
+      </div>
+
+      <div class="sheet" id="sheet-preview" hidden>
+        <div class="sheet-group pad">
+          <div class="sheet-head">
+            <div class="sheet-title" id="pv-title"></div>
+            <div class="sheet-sub">Type your own text and drag the slider to resize</div>
+          </div>
+          <input class="pv-input" id="pv-input" type="text" />
+          <div class="pv-stage" id="pv-stage"></div>
+          <div class="pv-slider">
+            <input id="pv-range" type="range" min="12" max="96" value="32" aria-label="Font size" />
+            <span id="pv-size">32px</span>
+          </div>
+        </div>
+        <button class="sheet-cancel" data-act="close" type="button">Close</button>
+      </div>
+
+      <div class="sheet" id="sheet-meta" hidden>
+        <div class="sheet-group pad">
+          <div class="sheet-head">
+            <div class="sheet-title">Font metadata</div>
+            <div class="sheet-sub" id="mt-file"></div>
+          </div>
+          <div class="meta-table" id="mt-table"></div>
+        </div>
+        <button class="sheet-cancel" data-act="close" type="button">Close</button>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" hidden></div>
+    <script src="./app.js"></script>
+  </body>
 </html>
