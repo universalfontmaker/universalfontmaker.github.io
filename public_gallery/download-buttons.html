@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Font download buttons</title>
+  <style>
+    .btn { display:inline-block; margin:6px; padding:8px 12px; background:#0366d6; color:#fff; text-decoration:none; border-radius:4px; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding:20px; }
+  </style>
+</head>
+<body>
+  <h1>Download fonts from public_gallery</h1>
+  <div id="fonts"></div>
+
+  <script>
+    const owner = 'universalfontmaker';
+    const repo  = 'universalfontmaker.github.io';
+    const branch = 'main'; // change if your default branch is different
+
+    const files = [
+      'Andrea.ttf',
+      'Cgcghc.ttf',
+      'DevtestFont.ttf',
+      'InWaterMyanmar.ttf',
+      'Myanmarteemo.ttf',
+      'Myanmarthai.ttf',
+      'One.ttf',
+      'Pauktatkaya.ttf',
+      'SanF.ttf',
+      'Two.ttf',
+      'mmBlocks.ttf'
+    ];
+
+    const container = document.getElementById('fonts');
+
+    files.forEach(name => {
+      const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/public_gallery/${encodeURIComponent(name)}`;
+      const a = document.createElement('a');
+      a.href = url;
+      a.className = 'btn';
+      a.textContent = `Download ${name}`;
+      a.setAttribute('download', name); // hint to browser to download
+      a.setAttribute('rel', 'noopener noreferrer');
+      container.appendChild(a);
+    });
+  </script>
+</body>
+</html>
