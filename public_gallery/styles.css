@@ -56,7 +56,7 @@ body {
 .card-lang { font-size: 10.5px; letter-spacing: 0.8px; color: var(--sub); text-transform: uppercase; }
 .sample {
   margin: 16px 0 18px;
-  font-size: 24px;
+  font-size: 9.6px;
   line-height: 1.6;
   max-height: 2.95em;
   overflow: hidden;
