@@ -1,80 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Universal Font Maker — Community Fonts</title>
-    <meta name="description" content="Community fonts created with UFMaker. Preview, inspect metadata and download Burmese, Latin and Thai fonts." />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="back" href="https://play.google.com/store/apps/details?id=com.cstmpj.two" aria-label="Open Universal Font Maker on Google Play">
-        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-          <path d="M15 4 L7 12 L15 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <div class="titles">
-        <h1>Universal Font Maker</h1>
-        <p>Community font created with UFMaker.</p>
-      </div>
-    </header>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Universal Font Maker — Create Fonts in 150+ Languages on Android</title>
+<meta name="description" content="Universal Font Maker is an Android font creator for 150+ languages and scripts. Draw or trace glyphs by hand, auto-trace images and SVGs, then export real TTF and OTF font files offline." />
+<link rel="canonical" href="https://universalfontmaker.github.io/" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="keywords" content="font maker, font creator, font designer app, Myanmar font creator, Burmese font maker, Zawgyi Unicode font designer, Thai font maker, Hindi font creator, Arabic font designer, TTF maker, OTF creator, handwriting to font, Android font app" />
 
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Universal Font Maker" />
+<meta property="og:title" content="Universal Font Maker — Create Fonts in 150+ Languages on Android" />
+<meta property="og:description" content="Draw, trace or import glyphs and export real TTF and OTF fonts. Supports Myanmar, Thai, Hindi, Arabic, Chinese and 150+ more scripts. Works offline." />
+<meta property="og:url" content="https://universalfontmaker.github.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Universal Font Maker — Create Fonts in 150+ Languages" />
+<meta name="twitter:description" content="Android font creator for 150+ languages. Draw glyphs, auto-trace artwork, export TTF and OTF offline." />
 
-    <nav class="chips" id="chips" aria-label="Filter by language">
-      <button class="chip is-active" data-lang="all" type="button">All</button>
-      <button class="chip" data-lang="Burmese" type="button">Burmese</button>
-      <button class="chip" data-lang="Latin" type="button">Latin</button>
-      <button class="chip" data-lang="Thai" type="button">Thai</button>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500&family=Noto+Sans+Myanmar:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Universal Font Maker",
+      "alternateName": ["Font Maker", "Font Creator", "Myanmar Font Creator"],
+      "operatingSystem": "Android",
+      "applicationCategory": "DesignApplication",
+      "url": "https://universalfontmaker.github.io/",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.cstmpj.two",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.cstmpj.two",
+      "description": "Android app to design and build fonts for 150+ languages and scripts. Draw glyphs by hand, auto-trace images or SVG artwork, and export TTF and OTF font files offline.",
+      "featureList": [
+        "Draw glyphs by hand on a metric-accurate canvas",
+        "Auto-trace scanned handwriting, images and SVG files",
+        "Printable grid templates for offline drawing",
+        "Export TTF and OTF font files",
+        "Supports 150+ languages and writing systems",
+        "Works fully offline on the device"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Universal Font Maker",
+      "url": "https://universalfontmaker.github.io/",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best Myanmar (Burmese) font creator app for Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Universal Font Maker is an Android font creator built with Myanmar script in mind. It includes the full Burmese consonant, vowel, medial and subscript set with correct stacking, and exports ready-to-install TTF and OTF files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many languages does Universal Font Maker support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "More than 150 languages and writing systems, including Myanmar, Thai, Lao, Khmer, Hindi, Bengali, Tamil, Telugu, Kannada, Malayalam, Gujarati, Punjabi, Sinhala, Arabic, Hebrew, Greek, Cyrillic (Russian and Ukrainian as separate alphabets), Armenian, Georgian, Amharic, Chinese, Japanese, Korean and the full Latin set."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I turn my handwriting into a font?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Print a grid template, write each letter by hand, photograph or scan the sheet, then import it. The auto-tracer converts the strokes into vector outlines you can refine before exporting a font file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file formats can I export?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TTF and OTF font files, which install on Android, Windows, macOS and Linux and work in design software such as Photoshop, Illustrator, Figma, Canva and Microsoft Word."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it need an internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Drawing, tracing and font building all run on the device, so you can create and export fonts fully offline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Universal Font Maker free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The app is free to download from Google Play and includes the drawing, tracing and export workflow. Some advanced tools are offered as an optional upgrade inside the app."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <span class="brand">Universal&nbsp;Font&nbsp;Maker</span>
+    <nav aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#languages">Languages</a>
+      <a href="#faq">FAQ</a>
     </nav>
+    <a class="btn btn-sm" href="https://play.google.com/store/apps/details?id=com.cstmpj.two" rel="noopener">Get the app</a>
+  </div>
+</header>
 
-    <main id="list" class="list"></main>
+<main id="main">
 
-    <!-- Action sheet -->
-    <div class="overlay" id="overlay" hidden>
-      <div class="sheet" id="sheet-actions" hidden>
-        <div class="sheet-group">
-          <div class="sheet-head">
-            <div class="sheet-title" id="as-title"></div>
-            <div class="sheet-sub" id="as-sub"></div>
-          </div>
-          <button class="sheet-btn" data-act="preview" type="button">Preview</button>
-          <button class="sheet-btn" data-act="download" type="button">Download</button>
-          <button class="sheet-btn" data-act="metadata" type="button">Metadata</button>
-          <button class="sheet-btn" data-act="copy" type="button">Copy link</button>
-        </div>
-        <button class="sheet-cancel" data-act="close" type="button">Cancel</button>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Android · Offline · 150+ writing systems</p>
+      <h1>Create your own font in 150+ languages — right on your phone</h1>
+      <p class="lede">
+        Universal Font Maker is a font creator, font maker and glyph designer for Android.
+        Draw each letter by hand, auto-trace a photo of your handwriting or import SVG artwork,
+        then export a real <strong>TTF</strong> or <strong>OTF</strong> file you can install anywhere.
+        Built for complex scripts — Myanmar, Thai, Khmer, Devanagari, Arabic and many more.
+      </p>
+      <div class="cta">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.cstmpj.two" rel="noopener">Download on Google Play</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
-
-      <div class="sheet" id="sheet-preview" hidden>
-        <div class="sheet-group pad">
-          <div class="sheet-head">
-            <div class="sheet-title" id="pv-title"></div>
-            <div class="sheet-sub">Type your own text and drag the slider to resize</div>
-          </div>
-          <input class="pv-input" id="pv-input" type="text" />
-          <div class="pv-stage" id="pv-stage"></div>
-          <div class="pv-slider">
-            <input id="pv-range" type="range" min="12" max="96" value="32" aria-label="Font size" />
-            <span id="pv-size">32px</span>
-          </div>
-        </div>
-        <button class="sheet-cancel" data-act="close" type="button">Close</button>
-      </div>
-
-      <div class="sheet" id="sheet-meta" hidden>
-        <div class="sheet-group pad">
-          <div class="sheet-head">
-            <div class="sheet-title">Font metadata</div>
-            <div class="sheet-sub" id="mt-file"></div>
-          </div>
-          <div class="meta-table" id="mt-table"></div>
-        </div>
-        <button class="sheet-cancel" data-act="close" type="button">Close</button>
-      </div>
+      <p class="sample" aria-hidden="true">အက္ခရာ · ตัวอักษร · अक्षर · حرف · Ձայն · ᐊᐃᐧ · Aa</p>
     </div>
+  </section>
 
-    <div class="toast" id="toast" hidden></div>
-    <script src="./app.js"></script>
-  </body>
+  <section id="features" class="wrap block">
+    <h2>A full type-design workspace in your pocket</h2>
+    <ul class="grid">
+      <li><h3>Draw glyphs by hand</h3><p>A metric-accurate canvas with ascent, cap-height, x-height, baseline, descent and advance width guides, plus pressure-style brushes, contour point editing and pinch zoom.</p></li>
+      <li><h3>Auto-trace images &amp; SVG</h3><p>Photograph inked lettering or import an SVG and let the tracer build clean vector outlines. Guides are printed faintly so they never end up in your font.</p></li>
+      <li><h3>Printable templates</h3><p>Download grid sheets, write your alphabet on paper, then upload the scan — the classic handwriting-to-font workflow, done on a phone.</p></li>
+      <li><h3>Export TTF and OTF</h3><p>Real font binaries with proper naming, metrics and side bearings, ready for Photoshop, Illustrator, Figma, Canva, Word and system install.</p></li>
+      <li><h3>Complex script support</h3><p>Stacked Myanmar subscripts, Thai and Lao marks, Devanagari matras, Arabic joining, and separate Russian and Ukrainian Cyrillic alphabets.</p></li>
+      <li><h3>Works offline</h3><p>Every step — drawing, tracing, building, exporting — runs on the device. No account, no upload, no connection needed.</p></li>
+    </ul>
+  </section>
+
+  <section id="how" class="wrap block">
+    <h2>How to make a font in four steps</h2>
+    <ol class="steps">
+      <li><h3>1. Pick your language pack</h3><p>Choose a script — Burmese, Thai, Hindi, Arabic, Latin and 150+ more — and get exactly the glyph set that language needs.</p></li>
+      <li><h3>2. Draw, trace or import</h3><p>Sketch each glyph over the reference outline, auto-trace a photo, or bring in SVG shapes from another app.</p></li>
+      <li><h3>3. Set the details</h3><p>Name the family, add designer and licence info, tune weight and spacing, and preview real sentences as you type.</p></li>
+      <li><h3>4. Export and install</h3><p>Build a TTF or OTF, share it to any app, and install it on your phone or computer.</p></li>
+    </ol>
+  </section>
+
+  <section id="languages" class="wrap block">
+    <h2>Make a font for your language</h2>
+    <p class="lede narrow">
+      Universal Font Maker covers over 150 languages and scripts. Search yours below —
+      each one works as a font creator, font maker, font designer and typeface builder,
+      with a matching glyph set and live preview text.
+    </p>
+    <div class="search">
+      <label for="langSearch">Search a language</label>
+      <input id="langSearch" type="search" placeholder="e.g. Myanmar, Thai, Hindi, Arabic…" autocomplete="off" />
+      <p id="langCount" class="count" role="status"></p>
+    </div>
+    <ul id="langList" class="chips"></ul>
+    <p id="langPhrases" class="phrases"></p>
+  </section>
+
+  <section id="faq" class="wrap block">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details open><summary>What is the best Myanmar (Burmese) font creator app for Android?</summary><p>Universal Font Maker is built with Myanmar script in mind: the full consonant, vowel, medial and subscript set, correct stacking and side bearings, and TTF/OTF export you can install straight away.</p></details>
+      <details><summary>How many languages are supported?</summary><p>More than 150, including Myanmar, Thai, Lao, Khmer, Hindi, Bengali, Tamil, Telugu, Kannada, Malayalam, Gujarati, Punjabi, Sinhala, Arabic, Hebrew, Greek, Russian, Ukrainian, Armenian, Georgian, Amharic, Chinese, Japanese, Korean and Latin.</p></details>
+      <details><summary>Can I turn my handwriting into a font?</summary><p>Yes. Print a grid template, write the letters, photograph the sheet and import it — the auto-tracer turns your strokes into vector outlines.</p></details>
+      <details><summary>Which formats can I export?</summary><p>TTF and OTF, which work on Android, Windows, macOS and Linux and in design tools like Photoshop, Illustrator, Figma, Canva and Word.</p></details>
+      <details><summary>Does it work offline?</summary><p>Yes — drawing, tracing and font building all happen on the device.</p></details>
+      <details><summary>Is it free?</summary><p>Free to download on Google Play, with an optional in-app upgrade for advanced tools.</p></details>
+    </div>
+  </section>
+
+  <section class="wrap block final">
+    <h2>Start designing your typeface today</h2>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.cstmpj.two" rel="noopener">Download on Google Play</a>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p>Universal Font Maker — font creator and glyph designer for 150+ languages.</p>
+  <p><a href="https://play.google.com/store/apps/details?id=com.cstmpj.two" rel="noopener">Google Play</a></p>
+</footer>
+
+<script src="./script.js" defer></script>
+</body>
 </html>
